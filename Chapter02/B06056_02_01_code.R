@@ -5,17 +5,16 @@
 
 # load the package
 library(twitteR)
-
-# set the credentials
-CONSUMER_SECRET <- "XXXXXXXX"
-CONSUMER_KEY <- "XXXXXX"
-
-# connect to twitter app
-setup_twitter_oauth(consumer_key = CONSUMER_KEY,
-                    consumer_secret = CONSUMER_SECRET)
+# set keys
+consumerKey <- "B6jGdNNl1a9upp41TDJeKdLvL"
+consumerSecret <- "6d3Rt3TBxQRNf1EjlVfOJ5MxEyb93xPOAI2rpecPSH8RWwMG52"
+accessToken <- "1088135928-8J59y93EWJquXGJbrTewGmi5XqnkAoCw28kX5e7"
+accessTokenSecret <- "HjkY7bxeFBFlZwddGkTiNcXZ5ixCxDL9nu2wmEFBgnwz1"
+# connect to api
+setup_twitter_oauth(consumerKey, consumerSecret,accessToken, accessTokenSecret)
 
 # set twitter user
-twitterUser <- getUser("jack")
+twitterUser <- getUser("TataSky")
 
 # extract a few sample tweets from this user's timeline
 tweets <- userTimeline(twitterUser, n = 10)
